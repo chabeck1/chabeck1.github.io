@@ -500,8 +500,8 @@
                 const centerX = rect.width / 2;
                 const centerY = rect.height / 2;
                 
-                const tiltX = (y - centerY) / 20;
-                const tiltY = (centerX - x) / 20;
+                const tiltX = (y - centerY) / 100;
+                const tiltY = (centerX - x) / 100;
                 
                 section.style.transform = `perspective(1000px) rotateX(${tiltX}deg) rotateY(${tiltY}deg) scale(1.02)`;
             });
