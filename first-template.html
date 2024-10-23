@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Charles Beck - Interactive Resume</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --primary-color: #2c3e50;
+            --secondary-color: #3498db;
+            --accent-color: #e74c3c;
+            --text-color: #333;
+            --background-color: #ecf0f1;
+        }
+        body {
+            font-family: 'Poppins', sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            background-color: var(--background-color);
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        header {
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            color: white;
+            padding: 60px 0;
+            text-align: center;
+            margin-bottom: 40px;
+        }
+        h1 {
+            margin: 0;
+            font-size: 3.5em;
+            letter-spacing: 2px;
+        }
+        .contact-info {
+            margin-top: 20px;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+        .contact-info a {
+            color: white;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            padding: 5px 10px;
+            border-radius: 20px;
+            background-color: rgba(255,255,255,0.1);
+        }
+        section {
+            background-color: white;
+            padding: 30px;
+            margin-bottom: 30px;
+            border-radius: 10px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+        h2 {
+            color: var(--primary-color);
+            border-bottom: 2px solid var(--secondary-color);
+            padding-bottom: 10px;
+            margin-top: 0;
+            display: flex;
+            align-items: center;
+        }
+        h2 i {
+            margin-right: 10px;
+            color: var(--secondary-color);
+        }
+        .experience-item, .project-item {
+            margin-bottom: 25px;
+            padding-left: 20px;
+            border-left: 3px solid var(--secondary-color);
+            position: relative;
+        }
+        .experience-item:before, .project-item:before {
+            content: '';
+            position: absolute;
+            left: -9px;
+            top: 0;
+            width: 15px;
+            height: 15px;
+            border-radius: 50%;
+            background-color: var(--secondary-color);
+        }
+        .experience-item h3, .project-item h3 {
+            margin-bottom: 5px;
+            color: var(--primary-color);
+        }
+        ul {
+            padding-left: 20px;
+        }
+        .skills {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+        .skill {
+            background-color: var(--secondary-color);
+            color: white;
+            padding: 8px 15px;
+            border-radius: 20px;
+            font-size: 0.9em;
+        }
+        @media (max-width: 768px) {
+            header {
+                padding: 40px 0;
+            }
+            h1 {
+                font-size: 2.5em;
+            }
+            .contact-info {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Charles Beck</h1>
+            <div class="contact-info">
+                <a href="tel:2488601227"><i class="fa fa-phone"></i> (248) 860-1227</a>
+                <a href="mailto:chabeck@umich.edu"><i class="fa fa-envelope"></i> chabeck@umich.edu</a>
+                <a href="https://linkedin.com/in/chabeck" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a>
+                <a href="https://github.com/chabeck1" target="_blank"><i class="fab fa-github"></i> GitHub</a>
+            </div>
+        </div>
+    </header>
+
+    <div class="container">
+        <section id="education">
+            <h2><i class="fa fa-graduation-cap"></i> Education</h2>
+            <div class="experience-item">
+                <h3>University of Michigan, Ann Arbor, MI</h3>
+                <p>Bachelor of Science in Computer Science</p>
+                <p>Aug. 2023 – May 2027</p>
+            </div>
+            <div class="experience-item">
+                <h3>Seaholm High School, Birmingham, MI</h3>
+                <p>High School Diploma</p>
+                <p>Aug. 2019 – May 2023</p>
+            </div>
+        </section>
+
+        <section id="experience">
+            <h2><i class="fa fa-briefcase"></i> Experience</h2>
+            <div class="experience-item">
+                <h3>Michigan Men's Rowing Athlete</h3>
+                <p>The University of Michigan, Ann Arbor, MI</p>
+                <p>August 2023 – July 2024</p>
+                <ul>
+                    <li>Committed to an intensive 15-hour weekly practice schedule, supplemented by additional personal training.</li>
+                    <li>Actively fund-raised for the team through weekly community service initiatives.</li>
+                    <li>Won second place at the ACRA National Championships in the Novice Lightweight 4+.</li>
+                </ul>
+            </div>
+            <div class="experience-item">
+                <h3>EECS 183 Final Showcase Silver Finalist</h3>
+                <p>The University of Michigan, Ann Arbor, MI</p>
+                <p>December 2023</p>
+                <ul>
+                    <li>Engaged in an over 300-person competition where participants created and presented projects.</li>
+                    <li>Used an Arduino and breadboard to code a complex game that won a silver medal.</li>
+                </ul>
+            </div>
+            <div class="experience-item">
+                <h3>eSports Team Captain</h3>
+                <p>Birmingham Legacy, Birmingham, MI</p>
+                <p>August 2019 – June 2023</p>
+                <ul>
+                    <li>Lead a team of six players to the HSEL semi-finals for Overwatch.</li>
+                    <li>Organized weekly video review sessions, coaching team members.</li>
+                    <li>Arranged daily team practices as well as social events.</li>
+                </ul>
+            </div>
+        </section>
+
+        <section id="projects">
+            <h2><i class="fa fa-code"></i> Projects</h2>
+            <div class="project-item">
+                <h3>Doodle Jump | C++, Arduino, Breadboard</h3>
+                <p>November 2023 – December 2023</p>
+                <ul>
+                    <li>Engineered a fully functional recreation of Doodle Jump on a 16x32 pixel LED screen from scratch.</li>
+                    <li>Implemented complex game mechanics including hitboxes, gravity simulation, and endless scrolling with minimal latency.</li>
+                </ul>
+            </div>
+            <div class="project-item">
+                <h3>Stock Trading Algorithm Development | Python, Git</h3>
+                <p>September 2024 – Present</p>
+                <ul>
+                    <li>Developing a swing trading algorithm in Python using API integration.</li>
+                    <li>Collaborating with two other partners to implement the strategy.</li>
+                </ul>
+            </div>
+            <div class="project-item">
+                <h3>Unblocked Games Website Development | HTML, WordPress</h3>
+                <p>September 2019 – Present</p>
+                <ul>
+                    <li>Developed a comprehensive unblocked games website to give access to online games in restricted environments.</li>
+                    <li>Implemented front-end features using HTML embedding for an interactive user interface.</li>
+                    <li>Deployed the website using WordPress and continuously maintained and updated it based on user feedback and security improvements.</li>
+                </ul>
+            </div>
+            <div class="project-item">
+                <h3>3D Maze Navigation Using BFS and DFS | C++</h3>
+                <p>September 2024 – October 2024</p>
+                <ul>
+                    <li>Developed a program to navigate a 3D maze using Breadth-First Search (BFS) and Depth-First Search (DFS) algorithms.</li>
+                    <li>Implemented backtracking to find and visualize the shortest path after maze traversal.</li>
+                    <li>Optimized data structures to handle 3D maze representation efficiently, ensuring swift algorithm execution.</li>
+                    <li>Tested and validated the program with multiple maze configurations to ensure robustness and accuracy.</li>
+                </ul>
+            </div>
+        </section>
+
+        <section id="skills">
+            <h2><i class="fa fa-cogs"></i> Technical Skills</h2>
+            <div class="skills">
+                <span class="skill">Java</span>
+                <span class="skill">Python</span>
+                <span class="skill">C++</span>
+                <span class="skill">LaTeX</span>
+                <span class="skill">R</span>
+                <span class="skill">HTML</span>
+                <span class="skill">WordPress</span>
+                <span class="skill">Git</span>
+                <span class="skill">VS Code</span>
+                <span class="skill">Visual Studio</span>
+            </div>
+        </section>
+    </div>
+</body>
+</html>

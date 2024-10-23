@@ -7,14 +7,10 @@
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
     <style>
         :root {
-            --bg-color: #1a1a2e;
-            --text-color: #e6e6fa;
-            --accent-color-1: #ff6b6b;
-            --accent-color-2: #4ecdc4;
-            --accent-color-3: #ffe66d;
+            --bg-color: #2F4F2F;
+            --text-color: #B2DFB2;
+            --accent-color: #98FB98;
             --section-bg: rgba(255, 255, 255, 0.05);
-            --gradient-1: linear-gradient(135deg, #ff6b6b, #4ecdc4);
-            --gradient-2: linear-gradient(135deg, #4ecdc4, #ffe66d);
         }
         
         * {
@@ -25,7 +21,7 @@
         
         body {
             font-family: 'Outfit', sans-serif;
-            background: linear-gradient(135deg, var(--bg-color), #2a2a4e);
+            background-color: var(--bg-color);
             color: var(--text-color);
             line-height: 1.6;
             font-weight: 300;
@@ -53,15 +49,11 @@
             height: auto;
             border-radius: 8px;
             transition: transform 0.3s ease;
-            box-shadow: 0 10px 30px rgba(78, 205, 196, 0.2);
-            border: 3px solid transparent;
-            background: var(--gradient-1);
-            background-clip: padding-box;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
         }
 
         .profile-img:hover {
             transform: scale(1.02);
-            box-shadow: 0 15px 40px rgba(78, 205, 196, 0.3);
         }
 
         section {
@@ -69,25 +61,18 @@
             padding: 40px;
             border-radius: 12px;
             margin-bottom: 40px;
-            transition: all 0.3s ease;
+            transition: transform 0.3s ease;
             animation: slideUp 0.8s ease-out;
-            border: 1px solid rgba(255, 255, 255, 0.1);
-            backdrop-filter: blur(10px);
         }
 
         section:hover {
             transform: translateY(-5px);
-            box-shadow: 0 10px 30px rgba(78, 205, 196, 0.1);
-            border-color: rgba(78, 205, 196, 0.3);
         }
 
         h1 {
             font-size: 4.5rem;
             margin: 0 0 20px 0;
-            background: var(--gradient-1);
-            -webkit-background-clip: text;
-            background-clip: text;
-            color: transparent;
+            color: var(--accent-color);
             font-weight: 500;
             letter-spacing: -0.02em;
             animation: slideIn 0.8s ease-out;
@@ -97,7 +82,7 @@
             font-size: 2.5rem;
             line-height: 1.3;
             margin-bottom: 30px;
-            color: var(--accent-color-2);
+            color: var(--accent-color);
             font-weight: 400;
             animation: slideIn 1s ease-out;
         }
@@ -109,10 +94,7 @@
         }
 
         h2 {
-            background: var(--gradient-2);
-            -webkit-background-clip: text;
-            background-clip: text;
-            color: transparent;
+            color: var(--accent-color);
             font-size: 1.8rem;
             margin: 0 0 30px 0;
             font-weight: 500;
@@ -124,7 +106,7 @@
         }
 
         h3 {
-            color: var(--accent-color-1);
+            color: var(--accent-color);
             font-size: 1.4rem;
             margin: 0 0 10px 0;
             font-weight: 500;
@@ -151,7 +133,7 @@
 
         li:before {
             content: "•";
-            color: var(--accent-color-2);
+            color: var(--accent-color);
             position: absolute;
             left: 20px;
             opacity: 0.8;
@@ -165,21 +147,19 @@
         }
 
         .skill {
-            background: rgba(78, 205, 196, 0.1);
-            color: var(--accent-color-2);
+            background: rgba(152, 251, 152, 0.1);
+            color: var(--accent-color);
             padding: 8px 16px;
             border-radius: 20px;
             font-size: 0.95rem;
             transition: all 0.3s ease;
             animation: fadeIn 1.5s ease-out;
-            border: 1px solid rgba(78, 205, 196, 0.2);
         }
 
         .skill:hover {
-            background: var(--gradient-1);
-            color: white;
+            background: var(--accent-color);
+            color: var(--bg-color);
             transform: translateY(-5px);
-            border-color: transparent;
         }
 
         .contact {
@@ -190,31 +170,26 @@
         }
 
         .contact a {
-            color: var(--accent-color-2);
+            color: var(--accent-color);
             text-decoration: none;
             padding: 8px 16px;
-            border: 1px solid var(--accent-color-2);
+            border: 1px solid var(--accent-color);
             border-radius: 20px;
             transition: all 0.3s ease;
             font-weight: 400;
-            position: relative;
-            overflow: hidden;
-            z-index: 1;
         }
 
         .contact a:hover {
-            color: white;
-            border-color: transparent;
-            background: var(--gradient-1);
-            transform: translateY(-3px);
-            box-shadow: 0 5px 15px rgba(78, 205, 196, 0.2);
+            background: var(--accent-color);
+            color: var(--bg-color);
         }
 
+        /* Click effect styles */
         .particle {
             pointer-events: none;
             position: fixed;
             border-radius: 50%;
-            background: var(--accent-color-2);
+            background: var(--accent-color);
             animation: particle-animation 0.8s ease-out forwards;
             z-index: 1000;
         }
@@ -222,7 +197,7 @@
         .ripple {
             pointer-events: none;
             position: fixed;
-            border: 2px solid var(--accent-color-2);
+            border: 2px solid var(--accent-color);
             border-radius: 50%;
             animation: ripple-animation 0.8s ease-out forwards;
             z-index: 1000;
@@ -233,7 +208,7 @@
             position: fixed;
             width: 8px;
             height: 8px;
-            background: var(--accent-color-2);
+            background: var(--accent-color);
             border-radius: 50%;
             z-index: 1000;
             transition: opacity 0.3s ease;
@@ -241,8 +216,12 @@
         }
 
         @keyframes fadeIn {
-            from { opacity: 0; }
-            to { opacity: 1; }
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
         }
 
         @keyframes slideIn {
@@ -319,10 +298,9 @@
             <img src="IMG_7549.JPG" alt="Profile" class="profile-img">
             <div>
                 <h1>I'm Charlie.</h1>
-                <div class="headline">Computer Science student at the University of Michigan, exploring technology through life.</div>
-                <p class="bio">As a dedicated CS student, I've explored various technological domains from algorithmic trading to game development. I combine technical expertise with creative problem-solving, actively participating in projects that challenge and expand my capabilities.</p>
+                <div class="headline">I'm a Computer Science student at the University of Michigan, exploring technology through life.</div>
+                <p class="bio">Over the past year, I've delved into various areas of computer science, from building Arduino games to developing trading algorithms. I'm passionate about combining technical skills with creative problem-solving.</p>
                 <div class="contact">
-                    <a href="tel:2488601227">(248) 860-1227</a>
                     <a href="mailto:chabeck@umich.edu">Email</a>
                     <a href="https://linkedin.com/in/chabeck">LinkedIn</a>
                     <a href="https://github.com/chabeck1">GitHub</a>
@@ -330,63 +308,22 @@
             </div>
         </div>
 
-        <section id="experience">
-            <h2>Experience</h2>
-            <div class="experience-item">
-                <h3>Michigan Hackers Quant Team Member</h3>
-                <div class="date">August 2024 – Present</div>
-                <ul>
-                    <li>Learning algorithmic trading concepts through hands-on Python development projects.</li>
-                    <li>Participating in weekly workshops on quantitative finance and technical analysis techniques.</li>
-                    <li>Gaining experience with financial APIs and market data processing through team projects.</li>
-                </ul>
-            </div>
-            <div class="experience-item">
-                <h3>Michigan Men's Rowing Athlete</h3>
-                <div class="date">August 2023 – July 2024</div>
-                <ul>
-                    <li>Dedicated 15+ hours weekly to rigorous team practices and independent strength training sessions.</li>
-                    <li>Secured silver medal in Novice Lightweight 4+ division at ACRA National Championships.</li>
-                    <li>Participated in weekly community outreach programs to raise essential team funding.</li>
-                </ul>
-            </div>
-            <div class="experience-item">
-                <h3>EECS 183 Final Showcase Silver Finalist</h3>
-                <div class="date">December 2023</div>
-                <ul>
-                    <li>Competed in an over 300-person competition where participants created and presented projects.</li>
-                    <li>Used an Arduino and breadboard to code a complex game that won a silver medal.</li>
-                </ul>
-            </div>
-        </section>
-
         <section id="projects">
             <h2>Projects</h2>
-            <div class="experience-item">
-                <h3>Stock Trading Algorithm</h3>
-                <div class="date">September 2024 – Present</div>
-                <ul>
-                    <li>Developing a quantitative trading algorithm using Python and Backtrader for market analysis.</li>
-                    <li>Engineered data pipeline with NumPy and Pandas to process market data and implement technical indicators.</li>
-                    <li>Collaborating with partner on strategy implementation through systematic testing and code reviews.</li>
-                </ul>
-            </div>
-            <div class="experience-item">
-                <h3>Unblocked Games Platform</h3>
-                <div class="date">September 2018 – Present</div>
-                <ul>
-                    <li>Built a responsive gaming platform with 10+ classic games using TailwindCSS for a modern interface.</li>
-                    <li>Implemented dropdown menus and mobile-responsive navigation using vanilla JavaScript.</li>
-                    <li>Created a responsive grid system for games with hover effects and accessibility features.</li>
-                </ul>
-            </div>
             <div class="experience-item">
                 <h3>Doodle Jump Recreation</h3>
                 <div class="date">November 2023 – December 2023</div>
                 <ul>
-                    <li>Engineered a recreation of Doodle Jump on a 16x32 LED matrix display using C++ and Arduino.</li>
-                    <li>Implemented core game mechanics including collision detection, gravity effects, and vertical scrolling.</li>
-                    <li>Optimized code for smooth gameplay performance within Arduino's hardware constraints.</li>
+                    <li>Engineered a fully functional recreation on a 16x32 pixel LED screen from scratch.</li>
+                    <li>Implemented complex game mechanics including hitboxes and gravity simulation.</li>
+                </ul>
+            </div>
+            <div class="experience-item">
+                <h3>Stock Trading Algorithm</h3>
+                <div class="date">September 2024 – Present</div>
+                <ul>
+                    <li>Developing a swing trading algorithm in Python using API integration.</li>
+                    <li>Collaborating with two other partners to implement the strategy.</li>
                 </ul>
             </div>
             <div class="experience-item">
@@ -400,22 +337,40 @@
             </div>
         </section>
 
+        <section id="experience">
+            <h2>Experience</h2>
+            <div class="experience-item">
+                <h3>Michigan Men's Rowing Athlete</h3>
+                <div class="date">August 2023 – July 2024</div>
+                <ul>
+                    <li>Committed to an intensive 15-hour weekly practice schedule, supplemented by additional personal training.</li>
+                    <li>Won second place at the ACRA National Championships in the Novice Lightweight 4+.</li>
+                    <li>Actively fund-raised for the team through weekly community service initiatives.</li>
+                </ul>
+            </div>
+            <div class="experience-item">
+                <h3>EECS 183 Final Showcase Silver Finalist</h3>
+                <div class="date">December 2023</div>
+                <ul>
+                    <li>Engaged in an over 300-person competition where participants created and presented projects.</li>
+                    <li>Used an Arduino and breadboard to code a complex game that won a silver medal.</li>
+                </ul>
+            </div>
+        </section>
+
         <section id="skills">
             <h2>Technical Skills</h2>
             <div class="skills">
-                <span class="skill">C++</span>
-                <span class="skill">Python</span>
                 <span class="skill">Java</span>
-                <span class="skill">JavaScript</span>
+                <span class="skill">Python</span>
+                <span class="skill">C++</span>
+                <span class="skill">LaTeX</span>
+                <span class="skill">R</span>
                 <span class="skill">HTML</span>
-                <span class="skill">CSS</span>
-                <span class="skill">TailwindCSS</span>
-                <span class="skill">NumPy</span>
-                <span class="skill">Pandas</span>
-                <span class="skill">Backtrader</span>
+                <span class="skill">WordPress</span>
                 <span class="skill">Git</span>
                 <span class="skill">VS Code</span>
-                <span class="skill">LaTeX</span>
+                <span class="skill">Visual Studio</span>
             </div>
         </section>
     </div>
@@ -514,9 +469,8 @@
             });
         });
 
-        // Add tilt effect to sections
-        document.querySelectorAll('section').forEach(section => {
-            section.addEventListener('mousemove', (e) => {
+            // Add a slight tilt effect to sections on mousemove
+            section.addEventListener('mousemove', (e) => {section.addEventListener('mousemove', (e) => {
                 const rect = section.getBoundingClientRect();
                 const x = e.clientX - rect.left;
                 const y = e.clientY - rect.top;
@@ -524,8 +478,8 @@
                 const centerX = rect.width / 2;
                 const centerY = rect.height / 2;
                 
-                const tiltX = (y - centerY) / 100;
-                const tiltY = (centerX - x) / 100;
+                const tiltX = (y - centerY) / 20;
+                const tiltY = (centerX - x) / 20;
                 
                 section.style.transform = `perspective(1000px) rotateX(${tiltX}deg) rotateY(${tiltY}deg) scale(1.02)`;
             });
