@@ -93,7 +93,7 @@
         .container {
             max-width: 1200px;
             margin: 0 auto;
-            padding: 40px 20px;
+            padding: 40px max(40px, calc((100vw - 1200px) / 2));
             position: relative;
         }
 
@@ -349,8 +349,10 @@
         .project-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 30px;
-            padding: 20px 0;
+            gap: 20px;    /* Reduced from 30px */
+            padding: 20px; /* Made equal to gap */
+            margin: 0 auto;
+            max-width: 1400px;
         }
     
         .project-card {
@@ -451,8 +453,10 @@
             color: var(--accent-color-2);
         }
     
+        
         @media (max-width: 768px) {
             .project-grid {
+                padding: 20px;
                 grid-template-columns: 1fr;
             }
         }
